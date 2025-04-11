@@ -74,6 +74,7 @@ input.onButtonPressed(Button.A, function () {
 function runTemperatureTask () {
     if (!(collectedHex.includes("67")) && input.temperature() > 31) {
         // ASCII for C
+        music.startMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.Once)
         basic.showNumber(67)
         collectedHex = "" + collectedHex + "67,"
     }
